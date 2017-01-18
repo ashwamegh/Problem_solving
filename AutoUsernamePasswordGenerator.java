@@ -1,7 +1,7 @@
 /**********Author : Shashank Shekhar <shashank7200@gmail.com> *********/
 /**********Thanks for likes and comments*********/
 
-//The algorithm genrates a username and a password
+//The algorithm generates a username and a password//
 
 import java.util.Random;
 
