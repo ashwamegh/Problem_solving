@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485975376 source:c:\users\ashwamegh\documents\github\problem_solving\sololearn\main.cpp
+	<iostream>
+	<math.h>
+	<string.h>
+
