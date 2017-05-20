@@ -3,51 +3,24 @@
 #include <string.h>
 
 using namespace std;
-
+//Function to print a matrix of 3x3.
 int main()
 {
-string s;
-cin>>s;
-char chaArr[s.length()];
-strcpy(chaArr,s.c_str());
+    int arr[3][3];
 
-  if (s.length()%2==0){
-    for (int i = 0, j = s.length()-1; i< (s.length()/2), j>(s.length()/2)+ 1; i++, j--){
-             if(i==(s.length()/2)-1 && j==s.length()/2 && chaArr[i]==chaArr[j]){
-
-                    cout<<"YES"<<endl;
-            }
-
-            else if (chaArr[i] == chaArr[j]){
-                i++;
-                j--;
-            }
-            else{
-                cout<<"NO"<<endl;
-            }
-
+    for ( int i =0 ; i<3 ; i++){
+        for (int j=0; j<3; j++){
+            cin>>arr[i][j];
+        }
     }
 
-  }
-
-  else{
-    for (int i=0, j=s.length()-1; i< (s.length()/2)+1,j>(s.length()/2)- 1; i++,j--){
-            if(i==(s.length()/2) && j==s.length()/2 && chaArr[i]==chaArr[j]){
-
-                    cout<<"YES"<<endl;
-            }
-            else if (chaArr[i] == chaArr[j]){
-                i++;
-                j--;
-            }
-
-            else{
-                cout<<"NO"<<endl;
-                break;
-            }
-
+        for ( int i =0 ; i<3 ; i++){
+           for (int j=0; j<3; j++){
+            cout<<arr[i][j]<<"\t";
+        }
+        cout<<"\n";
     }
-  }
+
 
 return 0;
 }
