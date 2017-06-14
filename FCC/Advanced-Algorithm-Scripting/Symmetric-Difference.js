@@ -1,18 +1,15 @@
 
 function sym(...args) {
-    let symmetricArr = [];
-    let differenceArr = [];
+    // let symmetricArray = args[0].filter((num, index) => num !== args[0][index-1] );
+    let symmetricArray = [];
 
-    args.map((arr) => {
-        arr.forEach((number) => 
-        symmetricArr.indexOf(number) ===-1?
-        symmetricArr.push(number):
-        differenceArr.push(number));
-    })
-
-    console.log(symmetricArr);
-    console.log(differenceArr);
-  return args;
+    args.forEach((arr) =>{
+         arr = arr.sort((a,b) => a-b).filter((num, index) => num !== arr[index-1] );
+         arr.forEach((num) => symmetricArray.indexOf(num)>-1 ?symmetricArray.splice(symmetricArray.indexOf(num),1):symmetricArray.push(num) )
+    });
+    symmetricArray = symmetricArray.sort((a,b) => a-b);
+    console.log(symmetricArray);
+  return symmetricArray;
 }
 
-sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3])
+sym([1, 2, 3], [5, 2, 1, 4, 5])
