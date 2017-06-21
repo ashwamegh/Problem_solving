@@ -33,15 +33,5 @@ class Stack {
 	}
 }
 
-let stack = new Stack();
-stack.push(3);
-stack.push(4);
-stack.push(2);
-stack.push(45);
-stack.push(23);
-stack.push(91);
-stack.push(01);
-stack.pop();
+module.exports = Stack;
 
-stack.print();
-console.log(stack.isEmpty());
