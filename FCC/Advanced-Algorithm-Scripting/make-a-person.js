@@ -3,9 +3,9 @@
 var Person = function(firstAndLast) {
     // Complete the method below and implement the others similarl
 
-    let fullNameString = firstAndLast;
-    let firstNameString = fullNameString.split(' ')[0];
-    let lastNameString = fullNameString.split(' ')[1];
+     fullNameString = firstAndLast;
+     firstNameString = fullNameString.split(' ')[0];
+     lastNameString = fullNameString.split(' ')[1];
     this.getFullName = function() {
       return fullNameString.trim();
     };
@@ -17,17 +17,21 @@ var Person = function(firstAndLast) {
     };
     this.setFirstName = function(first){
         firstNameString = first;
+        fullNameString = firstNameString +' '+lastNameString;
     };
     this.setLastName = function(last){
         lastNameString = last;
+        fullNameString = firstNameString +' '+lastNameString;
     };
     this.setFullName = function(fullName){
         fullNameString = fullName;
+     firstNameString = fullNameString.split(' ')[0];
+     lastNameString = fullNameString.split(' ')[1];
     };
     
     return firstAndLast;
 };
 
 var bob = new Person('Bob Ross');
-bob.setFirstName("Haskell")
+bob.setLastName("Curry");
 console.log(bob.getFullName());
